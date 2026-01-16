@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAnh_Bai3</title>
+</head>
+
+<body>
+    <div class="container">
+        <label for="">Đội 1:</label>
+        <input type="text" name="" id="diem1Doi1" placeholder="Điểm 1">
+        <input type="text" name="" id="diem2Doi1" placeholder="Điểm 2">
+        <input type="text" name="" id="diem3Doi1" placeholder="Điểm 3">
+        <br>
+        <label for="">Đội 2:</label>
+        <input type="text" name="" id="diem1Doi2" placeholder="Điểm 1">
+        <input type="text" name="" id="diem2Doi2" placeholder="Điểm 2">
+        <input type="text" name="" id="diem3Doi2" placeholder="Điểm 3">
+
+        <br>
+        <button id="btnTB">Tính toán</button>
+    </div>
+
+    <script>
+
+
+        var btnTB = document.getElementById("btnTB");
+        btnTB.onclick = () => {
+            var diem1Doi1 = Number(document.getElementById("diem1Doi1").value);
+            var diem2Doi1 = Number(document.getElementById("diem2Doi1").value);
+            var diem3Doi1 = Number(document.getElementById("diem3Doi1").value);
+            var diem1Doi2 = Number(document.getElementById("diem1Doi2").value);
+            var diem2Doi2 = Number(document.getElementById("diem2Doi2").value);
+            var diem3Doi2 = Number(document.getElementById("diem3Doi2").value);
+
+            var tinhDiemTB=(a,b,c)=>{
+                return (a+b+c)/3
+            }
+            var diemTBDoi1=tinhDiemTB(diem1Doi1,diem2Doi1,diem3Doi1)
+            var diemTBDoi2=tinhDiemTB(diem1Doi2,diem2Doi2,diem3Doi2)
+            console.log(diem1Doi1,diem2Doi1,diem3Doi1,diem1Doi2,diem2Doi2,diem3Doi2)
+            console.log("diem TB doi 1: "+diemTBDoi1)
+            console.log("diem TB doi 2: "+diemTBDoi2)
+
+            if(diemTBDoi1>diemTBDoi2 && diemTBDoi1>=100){
+                console.log("Đội 1 chiến thắng")
+            }else if(diemTBDoi1<diemTBDoi2&& diemTBDoi2>=100){
+                console.log("Đội 2 chiến thắng")
+            }else if(diemTBDoi1===diemTBDoi2&&diemTBDoi1>=100){
+                console.log("Hòa")
+            }else{
+                console.log("Không đội nào giành được cúp")
+            }
+        };
+
+    </script>
+</body>
+
+</html>

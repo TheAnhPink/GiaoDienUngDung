@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAnh_Bai4</title>
+</head>
+<body>
+    <label for="tien">Giá trị hóa đơn: </label>
+    <input type="text" name="" id="tien" placeholder="Nhập số tiền">
+    <button id="btnTinh">Tính tiền tip</button>
+
+    <script>
+        
+        var tip=0;
+        function tinhTienTip(tien){
+            tip=tien>=50 && tien<=300? tien*0.15: tien*0.2
+            return tip
+        }
+        document.getElementById("btnTinh").onclick=()=>{
+            var thanhTien=Number(document.getElementById("tien").value)
+            tinhTienTip(thanhTien)
+            var tongTien= thanhTien+tip
+            console.log("Giá trị hóa đơn: "+thanhTien)
+            console.log("Tiền tip: "+tip)
+            console.log("Tổng tiền phải trả: "+tongTien)
+            
+        }
+        
+        
+    </script>
+
+</body>
+</html>

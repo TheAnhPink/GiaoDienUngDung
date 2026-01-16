@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAnh_Bai1</title>
+</head>
+
+<body>
+    <label for="">Mark: </label>
+    <input type="text" name="" id="mass" placeholder="Nhap Mass">
+    <input type="text" name="" id="height" placeholder="Nhap Height">
+    <br>
+    <label for="">John: </label>
+    <input type="text" name="" id="mass1" placeholder="Nhap Mass">
+    <input type="text" name="" id="height1" placeholder="Nhap Height">
+    <br>
+    <button id="Enter">Enter</button>
+
+
+    <script>
+        var BMI = 0;
+        var btn = document.getElementById("Enter")
+        btn.onclick = () => {
+            var mass = document.getElementById("mass").value;
+            var height = document.getElementById("height").value;
+            var BMI = mass / (height ** 2);
+            var mass1 = document.getElementById("mass1").value;
+            var height1 = document.getElementById("height1").value;
+            var BMI1 = mass1 / (height1 ** 2);
+
+            var markHigherBMI = BMI > BMI1;
+            console.log("Mark has a higher BMI than John: "+markHigherBMI)
+
+        }
+
+    </script>
+</body>
+
+</html>
