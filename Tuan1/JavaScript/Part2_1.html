@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAnh_Part2_1</title>
+</head>
+<body>
+    <div class="container">
+        <label for="">Đội 1:</label>
+        <input type="text" name="" id="diem1Doi1" placeholder="Điểm 1">
+        <input type="text" name="" id="diem2Doi1" placeholder="Điểm 2">
+        <input type="text" name="" id="diem3Doi1" placeholder="Điểm 3">
+        <br>
+        <label for="">Đội 2:</label>
+        <input type="text" name="" id="diem1Doi2" placeholder="Điểm 1">
+        <input type="text" name="" id="diem2Doi2" placeholder="Điểm 2">
+        <input type="text" name="" id="diem3Doi2" placeholder="Điểm 3">
+
+        <br>
+        <button id="btnTB">Tính toán</button>
+    </div>
+    <script>
+        var calcAverage=(a,b,c)=>{
+            return (a+b+c)/3
+        }
+        var checkWinner=(avgDolphins,avgKoalas)=>{
+            if(avgDolphins>=avgKoalas*2){
+                console.log("Dolphins win ("+avgDolphins+" vs. "+avgKoalas+")")
+            }
+            else if(avgKoalas>=avgDolphins*2){
+                console.log("Koalas win ("+avgKoalas+" vs. "+avgDolphins+")")
+            }
+        }
+        document.getElementById("btnTB").onclick=()=>{
+            var diem1Doi1= Number(document.getElementById("diem1Doi1").value)
+            var diem2Doi1= Number(document.getElementById("diem2Doi1").value)
+            var diem3Doi1 = Number(document.getElementById("diem3Doi1").value);
+            var diem1Doi2 = Number(document.getElementById("diem1Doi2").value);
+            var diem2Doi2 = Number(document.getElementById("diem2Doi2").value);
+            var diem3Doi2 = Number(document.getElementById("diem3Doi2").value);
+
+            var TBdoi1= calcAverage(diem1Doi1,diem2Doi1,diem3Doi1)
+            var TBdoi2= calcAverage(diem1Doi2,diem2Doi2,diem3Doi2)
+
+            checkWinner(TBdoi1,TBdoi2);
+        }
+    </script>
+</body>
+</html>
