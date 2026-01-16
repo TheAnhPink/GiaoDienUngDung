@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhấn f12 để xem</p>
+
+    <script>
+
+        const bills=[22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+        const tip=[];
+        const tongTien=[];
+        var calcTip= (gtriHD)=>{
+            return gtriHD>=50&&gtriHD<=300? gtriHD*0.15:gtriHD*0.2
+        }
+        for(let i=0;i<bills.length;i++){
+            tip.push(calcTip(bills[i]))
+            tongTien.push(bills[i]+tip[i])
+        }
+        console.log("Thành tiền hóa đơn: ["+bills+"]")
+        console.log("Tiền tip          : ["+tip+"]")
+        console.log("Tổng tiền         : ["+tongTien+"]")
+
+        
+        var calcAverage=(mang)=>{
+            var sum=0
+            for(let i=0;i<mang.length;i++){
+                sum+=mang[i]
+            }
+
+            return sum/mang.length
+        }
+
+        console.log("Trung bình của mảng tổng tiền: "+calcAverage(tongTien))
+
+    </script>
+</body>
+</html>

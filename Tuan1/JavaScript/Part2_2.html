@@ -8,9 +8,10 @@
 </head>
 
 <body>
-    <label for="tien">Giá trị hóa đơn: </label>
+    <!-- <label for="tien">Giá trị hóa đơn: </label>
     <input type="text" name="" id="tien" placeholder="Nhập số tiền">
-    <button id="btnTinh">Tính tiền tip</button>
+    <button id="btnTinh">Tính tiền tip</button> -->
+    <p>Nhấn f12 để xem</p>
 
     <script>
         var calcTip= (gtriHD)=>{
@@ -24,9 +25,9 @@
         // viTri là index của bills, mà tips dc map từ bills nên tips[viTri] tương ứng
         const total=bills.map((giaTriHD,viTri)=>giaTriHD+tips[viTri])
 
-        console.log("Giá trị các hóa đơn: "+bills)
-        console.log("Tip ứng với hóa đơn: "+tips)
-        console.log("Tổng tiền hóa đơn:   "+total)
+        console.log("Giá trị các hóa đơn: ["+bills+"]")
+        console.log("Tip ứng với hóa đơn: ["+tips+"]")
+        console.log("Tổng tiền hóa đơn:   ["+total+"]")
 
     </script>
 
