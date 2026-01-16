@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhấn f12 để xem</p>
+
+
+    <script>
+
+        const mark = {
+            hoTen: "Mark Miller",
+            canNang: 78,
+            chieuCao: 1.69,
+            calcBMI: function () {
+                return this.bmi = this.canNang / (this.chieuCao ** 2)
+            }
+        }
+        const john = {
+            hoTen: "John Smith",
+            canNang: 92,
+            chieuCao: 1.95,
+            calcBMI: function () {
+                return this.bmi = this.canNang / (this.chieuCao ** 2)
+            }
+        }
+
+        mark.calcBMI();
+        john.calcBMI();
+
+        // dùng dấu `` ở bên trái số 1 chứ ko phải ''
+        if (mark.bmi > john.bmi) {
+            // .toFixed(1) dùng để chỉ lấy 1 số sau . của số thực
+            console.log(`${mark.hoTen} BMI ${mark.bmi.toFixed(1)} cao hơn ${john.hoTen} ${john.bmi.toFixed(1)}`)
+        } else if (mark.bmi < john.bmi) {
+            console.log(`${john.hoTen}'s BMI (${john.bmi.toFixed(1)}) cao hơn ${mark.hoTen}'s (${mark.bmi.toFixed(1)})`)
+        }
+    </script>
+</body>
+
+</html>
