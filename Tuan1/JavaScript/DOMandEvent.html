@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheAnh</title>
+</head>
+
+<body>
+
+    <div class="container" style="background-color: #222;">
+        <label style="color:white;">Message:</label>
+        <input type="text" id="mess">
+        <br>
+        <label style="color:white;">Number:</label>
+        <input type="text" id="num">
+        <br>
+        <label style="color:white;">Score:</label>
+        <input type="text" id="score">
+        <br>
+        <label style="color:white;">Guess:</label>
+        <input type="text" id="guess">
+
+        <button class="again">Again</button>
+    </div>
+
+    <script>
+        const mess = document.getElementById("mess");
+        const num = document.getElementById("num");
+        const score = document.getElementById("score");
+        const guess = document.getElementById("guess");
+        const container = document.querySelector(".container");
+
+        let secretNumber = Math.trunc(Math.random() * 20) + 1;
+        let scoreValue = 20;
+
+        mess.value = "Start guessing...";
+        num.value = "?";
+        score.value = scoreValue;
+
+        document.querySelector('.again').addEventListener('click', function () {
+            scoreValue = 20;
+            secretNumber = Math.trunc(Math.random() * 20) + 1;
+            mess.value = "Start guessing...";
+            num.value = "?";
+            score.value = scoreValue;
+            guess.value = "";
+
+            container.style.backgroundColor = "#222";
+            num.style.width = "15rem";
+        });
+    </script>
+
+<!-- 
+<body>
+
+    <div class="container" style="background-color: #222;">
+        <label for="mess" style="color:white ;">Message:</label>
+        <input type="text" name="" id="mess">
+        <br>
+        <label for="num" style="color:white ;">Number:</label>
+        <input type="text" name="" id="num">
+        <br>
+        <label for="score" style="color:white ;">Score:</label>
+        <input type="text" name="" id="score">
+        <br>
+        <label for="guess" style="color:white ;">Guess:</label>
+        <input type="text" name="" id="guess">
+
+        <button class="again">Again</button>
+    </div>
+
+    <script>
+        var mess = document.getElementById("mess").value
+        var num = document.getElementById("num").value
+        var score = document.getElementById("score").value
+        var guess = document.getElementById("guess").value
+         const container = document.querySelector(".container")
+
+        document.querySelector('.again').addEventListener('click', function () {
+            document.querySelector('.mess')
+        })
+    </script> -->
+
+</body>
+
+</html>
