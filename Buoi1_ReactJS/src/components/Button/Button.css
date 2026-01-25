@@ -1,0 +1,33 @@
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* PRIMARY */
+.btn-primary {
+  background-color: #1d4ed8;
+}
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+/* SUCCESS */
+.btn-success {
+  background-color: #16a34a;
+}
+.btn-success:hover {
+  background-color: #15803d;
+}
+
+/* DANGER */
+.btn-danger {
+  background-color: #dc2626;
+}
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
